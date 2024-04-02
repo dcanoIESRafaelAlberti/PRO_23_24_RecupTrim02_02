@@ -17,8 +17,6 @@ en ```GestorBiblioteca``` *(sin eliminar el ya existente, sino haciendo una sobr
 Esta modificación va a requerir cambios en ```GestorElementos```, ```GestorBiblioteca``` y sus ```interfaces```. Se trata de eliminar GestorCatalogo y la interfaz IGestorCatalogo, para que GestorBiblioteca 
 delegue la responsabilidad de la gestión de los elementos del catálogo de la biblioteca a GestorElementos, o mejor dicho, a una abstracción que implemente el contrato IGestorElementos.
 
-El método ```generarId()``` de GestorCatalogo os va a dar problemas al eliminar esta clase, mi consejo es que lo sustituyáis directamente por su contenido dónde se esté llamando, es decir, por ```UtilidadesBiblioteca.generarIdentificadorUnico()```
-
 ### 2. Eliminar del proyecto GestorCatalogo.
 
 Una vez realizada la sustitución por completo, debéis eliminar ```GestorCatalogo``` y el interface ```IGestorcatalogo``` y comprobar que todo sigue funcionando correctamente.
