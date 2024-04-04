@@ -8,7 +8,10 @@ hemos estado viendo hasta ahora. Con esta modificación de nuestro código, si s
 al submenú y la llamada al método correspondiente.
 
 Para ello, se desarrollarán clases específicas para cada tipo de elemento (Libro, Revista, ...), cuyas instancias se pasarán cómo argumento a un nuevo método ```agregarElemento()``` que debéis implementar
-en ```GestorBiblioteca``` *(sin eliminar el ya existente, sino haciendo una sobrecarga)*.
+en ```GestorBiblioteca``` *(sin eliminar el ya existente, sino haciendo una sobrecarga)*... es decir, deberéis pasar a tener dos métodos agregarElemento:
+
+    - agregarElemento(elemento: ElementoBiblioteca)
+    - agregarElemento(creadorElemento: ICreadorElemento<ElementoBiblioteca>)
 
 ## Detalles de los cambios y nuevos desarrollos que debéis realizar:
 
